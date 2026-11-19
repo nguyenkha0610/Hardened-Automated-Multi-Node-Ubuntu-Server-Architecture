@@ -1,0 +1,1 @@
+UUID=<UUID-DISK-BACKUP-VM2>  /mnt/backup  ext4  defaults,nofail  0  2

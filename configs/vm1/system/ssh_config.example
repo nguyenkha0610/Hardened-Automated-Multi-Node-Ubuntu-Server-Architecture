@@ -1,0 +1,10 @@
+# ~/.ssh/config trên máy admin: dùng VM2 làm bastion (ProxyJump)
+Host vm2
+    HostName <IP-VM2>
+    User sysadmin
+    Port 2222
+Host vm1
+    HostName <IP-VM1>
+    User sysadmin
+    Port 2222
+    ProxyJump vm2

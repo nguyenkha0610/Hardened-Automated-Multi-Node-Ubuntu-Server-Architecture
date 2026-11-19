@@ -1,0 +1,13 @@
+[DEFAULT]
+bantime  = 10m
+findtime = 10m
+maxretry = 3
+
+[sshd]
+enabled = true
+port    = 2222
+backend = systemd
+
+# Tùy chọn: bảo vệ endpoint login web
+# [nginx-http-auth]
+# enabled = true

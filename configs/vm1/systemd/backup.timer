@@ -1,0 +1,9 @@
+[Unit]
+Description=Chạy backup lúc 02:00 hằng ngày
+
+[Timer]
+OnCalendar=*-*-* 02:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

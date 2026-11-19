@@ -1,0 +1,12 @@
+# ~/.msmtprc (chmod 600) - cấu hình gửi cảnh báo (TV4)
+defaults
+auth           on
+tls            on
+logfile        /var/tmp/msmtp.log
+account        alert
+host           smtp.gmail.com
+port           587
+from           <email>@gmail.com
+user           <email>@gmail.com
+password       <APP-PASSWORD>
+account default : alert

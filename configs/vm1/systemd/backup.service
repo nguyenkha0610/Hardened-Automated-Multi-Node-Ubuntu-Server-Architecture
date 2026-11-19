@@ -1,0 +1,6 @@
+[Unit]
+Description=Sao lưu webapp (CSDL + file) và rsync sang VM2
+
+[Service]
+Type=oneshot
+ExecStart=/opt/linux-final-project/scripts/backup.sh

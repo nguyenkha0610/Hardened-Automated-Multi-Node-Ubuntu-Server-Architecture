@@ -1,0 +1,2 @@
+# Tùy chọn: cron mỗi 5 phút
+# */5 * * * * root /opt/linux-final-project/scripts/health-check.sh

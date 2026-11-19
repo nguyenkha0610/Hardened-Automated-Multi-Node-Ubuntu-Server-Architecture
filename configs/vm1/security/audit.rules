@@ -1,0 +1,4 @@
+# /etc/audit/rules.d/99-webapp.rules - nạp: sudo augenrules --load
+-w /etc/passwd -p rwxa -k passwd_access
+-w /etc/shadow -p rwxa -k shadow_access
+# Xem dấu vết: sudo ausearch -k shadow_access -i
