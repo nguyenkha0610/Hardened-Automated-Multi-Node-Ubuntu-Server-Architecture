@@ -4,15 +4,19 @@ After=network.target postgresql.service
 Wants=postgresql.service
 
 [Service]
+Type=simple
 User=webapp
 Group=webapp
 WorkingDirectory=/opt/webapp
 EnvironmentFile=/etc/webapp/app.env
-ExecStart=/opt/webapp/venv/bin/gunicorn -w 2 -b 127.0.0.1:8000 app:app
+ExecStart=/opt/webapp/venv/bin/gunicorn --workers 2 --bind 127.0.0.1:8000 --access-logfile - --error-logfile - app:app
 Restart=on-failure
 RestartSec=3
 StandardOutput=journal
 StandardError=journal
+SyslogIdentifier=webapp
+NoNewPrivileges=true
+PrivateTmp=true
 
 [Install]
 WantedBy=multi-user.target
